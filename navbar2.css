@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: calibri;
+}
+/* body, img {
+        background-image: url("gym.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    } */
+body, html {
+    width: 100%;
+    height: 100%;
+    
+}
+
+nav {
+    width: 100%;
+    height: 65px;
+    background-color: black;
+    border-color: white;
+}
+label.logo {
+    color: white;
+    font-size: 25px;
+    margin: 0 100px;
+    line-height: 60px;
+}
+nav ul {
+    float: right;
+    list-style-type: none;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 60px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 40px;
+}
+
+nav ul li a.active, a:hover {
+    color: red;
+    border: 1px solid white;
+    transition: .5s;
+}
+label #checkbtn, label #cancel  {
+    float: right;
+    color: white;
+    line-height: 60px;
+    margin: 3px;
+    margin-right: 10px;
+    font-size: 25px;
+    display: none;
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    grid-gap: 50px;
+    overflow-x:hidden;
+    opacity: 0.89;
+    z-index: -1;
+}
+.header h1 {
+    text-align: center;
+    padding-top: 100px;
+
+}
+.header p {
+    font-size: 18px;
+    text-align: center;
+
+}
+button{
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 5px 28px;
+    margin: 4px;
+    
+    
+}
+.img {
+    /* width: 70%;
+    height: 100%; */
+    object-fit: cover;
+    transition: 0.3s;
+    /* padding-top: 20px; */
+}
+#check {
+    display: none;
+}
+#check:checked ~ ul {
+    left: 0;
+}
+#check:checked ~ label #checkbtn {
+    display: none;
+}
+#check:checked ~ label #cancel {
+    display: block;
+}
+@media (max-width: 400px) {
+    label.logo {
+        font-size: 25px;
+        margin: 0 50px;
+    }
+}
+@media (max-width: 780px){
+    div .img {
+        height: 450px;
+    }
+    label.logo {
+        margin: 0 50px;
+    }
+    
+    nav ul {
+        width: 100%;
+        height: 100vh;
+        background-color: gray;
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        transition: .5s;
+    }
+    nav ul li {
+        display: block;
+        text-align: center;
+        line-height: 45px;
+        margin: 15px;
+    }
+}
+/* @media screen (mix-width:775px) and (max-width: 789px) {
+    .img {
+        width: 20px;
+        height: 120px;
+    }
+} */
